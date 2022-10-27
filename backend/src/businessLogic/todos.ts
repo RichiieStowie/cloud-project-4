@@ -33,14 +33,14 @@ export async function createTodo(
   }
 }
 
-export async function getAllTodos(): Promise<TodoItem[]> {
-  try {
-      logger.info('Fetching for all todos ')
-    return await todoAccess.getTodos()
-  } catch (error) {
-    createError('Unable to fetch todos')
-  }
-}
+// export async function getAllTodos(): Promise<TodoItem[]> {
+//   try {
+//       logger.info('Fetching for all todos ')
+//     return await todoAccess.getTodos()
+//   } catch (error) {
+//     createError('Unable to fetch todos')
+//   }
+// }
 
 export async function deleteTodo(userId: string, todoId: string) {
   try {

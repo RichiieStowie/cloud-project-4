@@ -30,7 +30,7 @@ export class TodosAccess {
   async getTodos(): Promise<TodoItem[]> {
     let todos = []
     let result = await this.docClient
-      .scan({
+      .query({
         TableName: this.TodosTable
       })
       .promise()
